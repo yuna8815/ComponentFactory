@@ -1,0 +1,7 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+.color {fill: var(--ion-color-base);}
+</style>
+<rect width="20" height="20" rx="10" class="color"/>
+<path d="M14.6668 10.6668H10.6668V14.6668H9.3335V10.6668H5.3335V9.3335H9.3335V5.3335H10.6668V9.3335H14.6668V10.6668Z" fill="white"/>
+</svg>

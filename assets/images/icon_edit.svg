@@ -1,0 +1,6 @@
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+.color {fill: var(--ion-color-base);}
+</style>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.5015V13.0013H3.4998L10.8726 5.62858L8.37276 3.12877L1 10.5015ZM12.8052 3.69479C13.0652 3.43481 13.0652 3.01484 12.8052 2.75486L11.2454 1.19498C10.9854 0.935005 10.5654 0.935005 10.3054 1.19498L9.08553 2.41489L11.5853 4.91469L12.8052 3.69479Z" class="color"/>
+</svg>
