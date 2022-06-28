@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import * as Hammer from 'hammerjs';
 import { PointModalComponent } from './00.modal/point-modal/point-modal.component';
+import { ExchangeModalComponent } from './00.modal/exchange-modal/exchange-modal.component';
 
 export class HammerConfig extends HammerGestureConfig {
   overrides = {
@@ -22,7 +23,8 @@ export class HammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    PointModalComponent
+    PointModalComponent,
+    ExchangeModalComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CalendarModule, HammerModule],
