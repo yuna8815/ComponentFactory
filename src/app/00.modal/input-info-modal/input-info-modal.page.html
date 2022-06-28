@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <div class="head">
+        <ion-icon (click)="dismiss()" name="close" class="close"></ion-icon>
+
+        <div class="box">
+          <p>건강설문은 정기적으로 시행되는 건강관련 설문지로 다음과 같이 2가지 설문 분류에 따른,</p>
+          <div class="d-flex align-center">
+            <div>
+              <ion-chip outline color="primary">기본</ion-chip>
+              <ion-label>간단한 설문지</ion-label>
+            </div>
+            <div>
+              <ion-chip color="primary">심층</ion-chip>
+              <ion-label>자세한 설문지</ion-label>
+            </div>
+          </div>
+          <p>아래와 같은 총 5가지 건강 항목에 대한 검사합니다.</p>
+        </div>
+      </div>
+
+      <div class="scroll">
+        <ion-list>
+          <ion-item *ngFor="let item of data" lines="full">
+            <div>
+              <div class="d-flex align-center">
+                <ion-icon src="assets/images/icon_check.svg" color="primary"></ion-icon>
+                <ion-text>{{ item.label }}</ion-text>
+              </div>
+              <ion-label color="grey-four">{{ item.text }}</ion-label>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="footer">
+        <ion-button (click)="dismiss()" expand="block">닫기</ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

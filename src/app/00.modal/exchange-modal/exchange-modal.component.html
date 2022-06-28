@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="d-flex align-center justify-center">
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-icon src="assets/images/icon_present_circle.svg"></ion-icon>
+        <ion-card-title>상품 교환</ion-card-title>
+
+        <ion-icon (click)="dismiss('cancel')" class="close" name="close"></ion-icon>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <ion-label><b>5 포인트</b>로 <b>건강보조식품 1개</b>와 교환 가능<br>보건관리자를 통해 2개월 후 상품이 지급됩니다.</ion-label>
+        <ion-text color="grey-four">최대 {{ max }}개 교환 가능 {{ count > 0 ? ' · '+count+'개 신청됨':'' }}</ion-text>
+        <ion-button (click)="dismiss('exchange')" [disabled]="isDisabled" expand="block">{{ btnMsg }}</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

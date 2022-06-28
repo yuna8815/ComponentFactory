@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <ion-icon (click)="dismiss()" name="close" class="close"></ion-icon>
+
+      <div class="scroll">
+        <ion-item lines="full">
+          <ion-icon slot="start" src="assets/images/icon_check.svg" color="primary"></ion-icon>
+          <div>
+            <ion-label>약한 통증</ion-label>
+            <ion-text>약간 불편한 정도이나,<br>작업에 열중할 때는 못 느낀다.</ion-text>
+          </div>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon slot="start" src="assets/images/icon_check.svg" color="primary"></ion-icon>
+          <div>
+            <ion-label>중간 통증</ion-label>
+            <ion-text>작업 중 통증이 있으나,<br>귀가 후 휴식을 취하면 괜찮다.</ion-text>
+          </div>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon slot="start" src="assets/images/icon_check.svg" color="primary"></ion-icon>
+          <div>
+            <ion-label>심한 통증</ion-label>
+            <ion-text>작업 중 통증이 비교적 심하고<br>귀가 후 에도 통증이 계속된다.</ion-text>
+          </div>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" src="assets/images/icon_check.svg" color="primary"></ion-icon>
+          <div>
+            <ion-label>매우 심한 통증</ion-label>
+            <ion-text>통증 때문에 작업은 물론<br>일상생활을 하기가 어렵다.</ion-text>
+          </div>
+        </ion-item>
+      </div>
+
+      <div class="footer">
+        <ion-button (click)="dismiss()" expand="block">닫기</ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

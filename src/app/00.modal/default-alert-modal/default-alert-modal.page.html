@@ -1,0 +1,15 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <ion-icon (click)="dismiss()" name="close"></ion-icon>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>{{ title }}</ion-card-title>
+        <ion-card-subtitle>{{ subtitle }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button (click)="dismiss()" expand="block" fill="outline">아니오.</ion-button>
+        <ion-button (click)="doCallback()" expand="block">네. {{ btnLabel }}</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

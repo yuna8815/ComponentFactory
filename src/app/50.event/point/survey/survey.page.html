@@ -1,0 +1,55 @@
+<div class="ion-page">
+  <ion-content>
+    <div class="section">
+      <ion-card class="point ion-text-center">
+        <ion-card-header>
+          <ion-card-title color="grey-four" class="d-flex align-center justify-center">
+            <ion-label>보유한 설문 포인트</ion-label>
+            <ion-icon (click)="presentInfo()" name="information-circle-outline"></ion-icon>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label color="primary"><span>{{ userPoint }}</span> 포인트</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="section">
+      <div class="title"><ion-label color="primary">건강설문</ion-label></div>
+      <ion-card class="survey d-flex ion-text-center">
+        <ion-card-content class="d-flex justify-center">
+          <div class="d-flex justify-center">
+            <div>
+              <p class="subtitle">1회</p>
+              <ion-icon src="assets/images/icon_check.svg" [color]="survey[0] ? 'primary':'grey-two'"></ion-icon>
+            </div>
+            <div>
+              <p class="subtitle">2회</p>
+              <ion-icon src="assets/images/icon_check.svg" [color]="survey[1] ? 'primary':'grey-two'"></ion-icon>
+            </div>
+          </div>
+          <div>
+            <p class="subtitle">포인트</p>
+            <ion-text [color]="survey[0] && survey[1] ? 'primary':''">{{ survey[0] && survey[1] ? '':'완료 시 ' }}+2 포인트</ion-text>
+          </div>
+        </ion-card-content>
+        <ion-card-content class="d-flex justify-center">
+          <div class="d-flex justify-center">
+            <div>
+              <p class="subtitle">3회</p>
+              <ion-icon src="assets/images/icon_check.svg" [color]="survey[2] ? 'primary':'grey-two'"></ion-icon>
+            </div>
+          </div>
+          <div>
+            <p class="subtitle">포인트</p>
+            <ion-text [color]="survey[2] ? 'primary':''">{{ survey[2] ? '':'완료 시 ' }}+3 포인트</ion-text>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+
+  <ion-footer class="ion-padding">
+    <ion-button (click)="presentExchange()" expand="block" [color]="isEnd ? '':'primary'">{{ isEnd ? '포인트 교환 이벤트가 종료되었습니다':'설문 포인트로 상품 수령하기' }}</ion-button>
+  </ion-footer>
+</div>

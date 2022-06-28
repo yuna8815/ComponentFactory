@@ -1,0 +1,146 @@
+ion-content {
+  --background: #F9FAFA;
+}
+
+.section {
+  padding: 8px 20px 32px;
+}
+
+.section .title {
+  justify-content: space-between;
+  padding: 0 5px 0 14px;
+
+  ion-label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+ion-card {
+  margin: 9px 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+}
+
+ion-card.point {
+  box-shadow: none;
+
+  ion-card-header {padding-bottom: 8px;}
+
+  ion-card-title {
+    font-size: 16px;
+    font-weight: 500;
+
+    ion-icon {margin-left: 4px;}
+  }
+
+  ion-card-content {
+    font-size: 20px;
+    font-weight: 500;
+
+    span {font-size: 32px;}
+  }
+}
+
+ion-card.code {
+  ion-card-title span {
+    margin: 0 2px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+  }
+}
+
+ion-card.freinds {
+  ion-card-header {padding-top: 31px;}
+  ion-card-title,
+  ion-card-content {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  ion-card-content {padding-bottom: 27px;}
+}
+
+table {
+  width: 100%;
+
+  tr th:first-child {
+    padding-left: 16px;
+    text-align: left;
+  }
+
+  tr th:last-of-type
+  tr td:last-of-type {
+    padding-right: 16px;
+  }
+
+  th,
+  td {
+    font-weight: 500;
+    line-height: 13px;
+  }
+
+  thead th {
+    height: 28px;
+    font-size: 10px;
+    transform: scale(.8);
+    color: var(--ion-color-grey-four);
+  }
+
+  tbody th {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    color: #000;
+  }
+
+  td {
+    height: 48px;
+    font-size: 10px;
+    text-align: center;
+
+    &.active {
+      font-weight: 700;
+      color: var(--ion-color-primary);
+    }
+
+    ion-icon {font-size: 24px;}
+  }
+}
+
+.lifelog {
+  text-align: center;
+  font-weight: 500;
+
+  ion-card-content {
+    flex: 1;
+    padding: 9px 10px;
+    font-size: 10px;
+    line-height: 12px;
+
+    & + ion-card-content {padding-left: 0;}
+  }
+
+  ion-icon {
+    margin-top: -7px;
+    font-size: 24px;
+  }
+
+  .subtitle {
+    margin-bottom: 16px;
+    font-size: 10px;
+    line-height: 13px;
+    transform: scale(.8);
+  }
+}
+
+ion-footer {
+  background: #F9FAFA;
+
+  ion-button:not([color="primary"]) {
+    --background: var(--ion-color-grey-one);
+    --background-activated: var(--ion-color-grey-one);
+    --color: var(--ion-color-grey-three);
+  }
+}

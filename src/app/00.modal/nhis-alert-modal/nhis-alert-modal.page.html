@@ -1,0 +1,15 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <ion-icon (click)="dismiss()" name="close"></ion-icon>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>국민건강 보험공단<br>검진 결과 추가하기</ion-card-title>
+        <ion-card-subtitle>검진 결과를 추가하여<br>보건관리자와 상담하세요.</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button (click)="doInput()" expand="block" fill="outline">직접 입력하기</ion-button>
+        <ion-button (click)="doUpload()" expand="block">웹에서 파일 불러오기</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

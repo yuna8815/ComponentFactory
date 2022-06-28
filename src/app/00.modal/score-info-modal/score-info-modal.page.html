@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <div class="head ion-text-right">
+        <ion-icon (click)="dismiss()" name="close" class="close"></ion-icon>
+
+        <ion-text color="grey-three">*각 선택 항목에 따른 점수</ion-text>
+      </div>
+
+      <div class="scroll">
+        <ion-card>
+          <div *ngFor="let items of object" class="wrap">
+            <ion-item *ngFor="let item of data[items]" lines="none" [class]="item.stacked != null ? 'has-stacked':''">
+              <ion-label *ngIf="item.stacked != null" color="primary" class="stacked">{{ item.stacked }}</ion-label>
+              <ion-icon slot="start" src="assets/images/icon_check.svg" color="primary"></ion-icon>
+              <ion-label><span>{{ item.label }}</span></ion-label>
+              <ion-text color="grey-four">{{ item.score }}점</ion-text>
+            </ion-item>
+          </div>
+        </ion-card>
+      </div>
+
+      <div class="footer">
+        <ion-button (click)="dismiss()" expand="block">닫기</ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

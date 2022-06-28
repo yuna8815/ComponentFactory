@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <ion-icon (click)="dismiss()" name="close"></ion-icon>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>기타 입력사항을<br>작성해 주세요.</ion-card-title>
+        <ion-card-subtitle>
+          <ion-input [(ngModel)]="input" placeholder="통증으로 인해 발생한 세부사항 작성"></ion-input>
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button (click)="doSubmit()" expand="block">확인</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

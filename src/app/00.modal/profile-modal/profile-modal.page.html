@@ -1,0 +1,9 @@
+<ion-content>
+
+</ion-content>
+
+<ion-footer translucent class="ion-padding">
+  <ion-button (click)="doImagePicker()" expand="block" class="choose">앨범에서 선택</ion-button>
+  <ion-button *ngIf="isImgNull" (click)="doImageDelete()" expand="block" color="black" class="delete">프로필 사진 삭제</ion-button>
+  <ion-button (click)="dismiss()" expand="block" color="black" class="cancel">취소</ion-button>
+</ion-footer>

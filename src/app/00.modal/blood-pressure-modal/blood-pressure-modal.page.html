@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header class="d-flex align-center">
+      <ion-button (click)="dismiss()" fill="clear" color="grey-four">취소</ion-button>
+      <b>혈압 입력</b>
+      <ion-button (click)="doSave()" fill="clear">저장</ion-button>
+    </ion-card-header>
+    <div></div>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-label>측정시간</ion-label>
+          <ion-input [(ngModel)]="time" slot="end" placeholder="12:30" [color]="time == '' ? '':'primary'"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>최고혈압 <small>mmHg</small></ion-label>
+          <ion-input [(ngModel)]="systolic" inputmode="tel" slot="end" placeholder="120" [color]="systolic == '' ? '':'primary'"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>최저혈압 <small>mmHg</small></ion-label>
+          <ion-input [(ngModel)]="diastolic" inputmode="tel" slot="end" placeholder="80" [color]="diastolic == '' ? '':'primary'"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>심박수 <small>bpm</small></ion-label>
+          <ion-input [(ngModel)]="pulse" inputmode="tel" slot="end" placeholder="100" [color]="pulse == '' ? '':'primary'"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

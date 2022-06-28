@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>적립 포인트</ion-title>
+  </ion-toolbar>
+
+  <ion-segment [value]="segmentValue">
+    <ion-segment-button *ngFor="let item of segment" [value]="item.value" (click)="create(item.value)">
+      <ion-label>{{ item.label }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <template #componentContainer></template>
+  <!-- <ion-router-outlet></ion-router-outlet> -->
+</ion-content>

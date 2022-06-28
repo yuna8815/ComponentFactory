@@ -1,0 +1,14 @@
+ion-button.choose {
+  margin-bottom: 0 !important;
+  --border-radius: 4px 4px 0 0;
+}
+ion-button.delete {
+  margin-top: 0 !important;
+  border-top: solid 0.5px var(--ion-color-grey-two);
+  --border-radius: 0 0 4px 4px;
+}
+
+ion-button.ion-color-black::part(native) {
+  background: var(--ion-color-black-contrast) !important;
+  color: var(--ion-color-black);
+}

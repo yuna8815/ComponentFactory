@@ -1,0 +1,23 @@
+ion-item {
+  --min-height: 50px;
+  --padding-start: 20px;
+
+  &.item-disabled {
+    opacity: 1;
+    --color: var(--ion-color-grey-two);
+
+    ion-icon {
+      --ion-color-base: var(--ion-color-grey-two) !important;
+    }
+  }
+}
+
+ion-icon {
+  margin-right: 32px;
+  font-size: 24px;
+}
+
+ion-label {
+  font-size: 16px !important;
+  color: var(--ion-color-grey-five);
+}

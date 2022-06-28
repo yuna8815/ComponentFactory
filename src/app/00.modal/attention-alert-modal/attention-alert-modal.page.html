@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="d-flex align-center">
+    <ion-card>
+      <ion-icon (click)="dismiss()" name="close"></ion-icon>
+      <ion-card-header class="ion-text-center">
+        <ion-icon src="assets/images/attention_circle.svg" color="primary"></ion-icon>
+        <ion-card-title>선택된 항목을<br>삭제하시겠습니까?</ion-card-title>
+        <!-- <ion-card-subtitle>{{ subtitle }}</ion-card-subtitle> -->
+      </ion-card-header>
+      <ion-card-content class="d-flex align-center">
+        <ion-button (click)="dismiss()" expand="block" fill="outline">취소</ion-button>
+        <ion-button (click)="doDelete()" expand="block">확인</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,86 @@
+<div class="ion-page">
+  <ion-content>
+    <div class="section">
+      <ion-card class="point ion-text-center">
+        <ion-card-header>
+          <ion-card-title color="grey-four" class="d-flex align-center justify-center">
+            <ion-label>보유한 친구 포인트</ion-label>
+            <ion-icon (click)="presentInfo()" name="information-circle-outline"></ion-icon>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label color="primary"><span>{{ userPoint }}</span> 포인트</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div *ngIf="!isEnd" class="section">
+      <div class="title"><ion-label color="primary">내 추천코드</ion-label></div>
+      <ion-card class="code ion-text-center">
+        <ion-card-header>
+          <ion-card-title color="grey-four" class="d-flex align-center justify-center">
+            <span *ngFor="let num of userCode">{{ num }}</span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label color="grey-four">몸튼맘튼 가입 시 추천코드를 입력하면<br>나와 친구에게 포인트가 적립됩니다.</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="section">
+      <div class="title"><ion-label color="primary">내가 추천한 친구</ion-label></div>
+      <ion-card *ngIf="freinds.length > 0; else none">
+        <table>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>사업장 정보</th>
+              <th>건강설문</th>
+              <th>포인트</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of freinds">
+              <th>{{ item.name }}</th>
+              <td><ion-icon src="assets/images/icon_check.svg" [color]="item.isCompany ? 'primary':'grey-two'"></ion-icon></td>
+              <td><ion-icon src="assets/images/icon_check.svg" [color]="item.isSurvey ? 'primary':'grey-two'"></ion-icon></td>
+              <td [class]="item.isCompany && item.isSurvey ? 'active':''">{{ item.isCompany && item.isSurvey ? '':'완료 시 ' }}+2 포인트</td>
+            </tr>
+          </tbody>
+        </table>
+      </ion-card>
+
+      <ng-template #none>
+        <ion-card class="freinds ion-text-center">
+          <ion-card-header>
+            <ion-card-title>추천한 친구가 없습니다.</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            몸튼맘튼을 동료에게 추천하고<br>포인트를 적립하세요!
+          </ion-card-content>
+        </ion-card>
+      </ng-template>
+    </div>
+
+    <div class="section">
+      <div class="title"><ion-label color="primary">라이프로그</ion-label></div>
+      <ion-card class="lifelog d-flex justify-space-around">
+        <ion-card-content class="d-flex justify-center">
+          <div *ngFor="let log of lifelogs;index as i">
+            <p class="subtitle">{{ i + 1 }}일</p>
+            <ion-icon src="assets/images/icon_check.svg" [color]="log ? 'primary':'grey-two'"></ion-icon>
+          </div>
+        </ion-card-content>
+        <ion-card-content>
+          <p class="subtitle">포인트</p>
+          <ion-text [color]="lifelogCount > 0 ? '':'primary'">{{ lifelogMsg }}+1 포인트</ion-text>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+
+  <ion-footer class="ion-padding">
+    <ion-button (click)="presentExchange()" expand="block" [color]="isEnd ? '':'primary'">{{ isEnd ? '포인트 교환 이벤트가 종료되었습니다':'친구 포인트로 상품 수령하기' }}</ion-button>
+  </ion-footer>
+</div>

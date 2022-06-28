@@ -1,0 +1,81 @@
+// 로그인, 회원가입 부분
+// full size input
+ion-list.input {
+  padding: 0 20px;
+}
+
+ion-list.input ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --min-height: 74px;
+
+  position: relative;
+  z-index: 0;
+
+  ion-label {
+    margin: 0 0 0 12px !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    transform: translateY(50%) scale(1) !important;
+  }
+
+  ion-button.visible {
+    --ripple-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    font-size: 14px;
+  }
+
+  ion-button[slot="end"] {
+    margin-left: 6px;
+    margin-right: 0;
+  }
+}
+
+ion-list.input ion-item {
+  ion-input,
+  ion-select {
+    --padding-top: 15px !important;
+    --padding-bottom: 15px !important;
+    --padding-start: 12px !important;
+    --placeholder-color: var(--ion-color-grey-three);
+    --placeholder-opacity: 1;
+
+    border-bottom: solid 1px var(--placeholder-color);
+  }
+  
+  ion-input {
+    flex: inherit;
+    font-size: 16px;
+  }
+
+  ion-select {
+    display: flex;
+    width: 100%;
+  }
+
+  &.item-has-focus ion-input {
+    border-bottom-color: var(--ion-color-primary) !important;
+  }
+}
+
+ion-list.input ion-item:not(.error):not(.item-has-focus) ion-label {--color: var(--ion-color-grey-three);}
+ion-list.input ion-item.item-has-focus ion-label {--color: var(--highlight-background) !important;}
+
+ion-list.input ion-item.error {
+  ion-input {border-bottom-color: var(--ion-color-red);}
+  ion-label {--color: var(--ion-color-red);}
+}
+
+ion-list.input ion-label.has-icon {
+  transform: translateY(20%) scale(1) !important;
+
+  ion-icon {
+    margin-right: 2px;
+    font-size: 20px;
+  }
+
+  span + ion-icon {margin-left: 17px;}
+}

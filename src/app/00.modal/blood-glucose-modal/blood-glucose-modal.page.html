@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header class="d-flex align-center">
+      <ion-button (click)="dismiss()" fill="clear" color="grey-four">취소</ion-button>
+      <b>혈당 입력</b>
+      <ion-button (click)="doSave()" fill="clear">저장</ion-button>
+    </ion-card-header>
+    <div></div>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-label>측정시간</ion-label>
+          <ion-input [(ngModel)]="time" slot="end" placeholder="12:30" [color]="time == '' ? '':'primary'"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>혈당 mg/dL</ion-label>
+          <ion-input [(ngModel)]="glucose" inputmode="tel" slot="end" placeholder="120" [color]="glucose == '' ? '':'primary'"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>측정시기</ion-label>
+          <div class="d-flex align-center">
+            <ion-chip (click)="doChecked('before')" outline [color]="isBefore ? 'primary':'grey-three'">식전</ion-chip>
+            <ion-chip (click)="doChecked('after')" outline [color]="isAfter ? 'primary':'grey-three'">식후</ion-chip>
+            <!-- <ion-text color="grey-four">식전</ion-text> <ion-icon (click)="doChecked('before')" [color]="isBefore ? 'primary':''" src="assets/images/icon_check.svg"></ion-icon>
+            <ion-text color="grey-four">식후</ion-text> <ion-icon (click)="doChecked('after')" [color]="isAfter ? 'primary':''" src="assets/images/icon_check.svg"></ion-icon> -->
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
